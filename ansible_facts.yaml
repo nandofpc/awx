@@ -1,7 +1,8 @@
 ---
-- name: Default Playbook
-  hosts: all
+- name: Update web servers
+  hosts: webservers
+
   tasks:
-    - name: Gedt ansible facts
+  - name: Get Ansible facts
       debug:
       var: ansible_facts
