@@ -1,0 +1,13 @@
+---
+
+- name: Install Collections
+  hosts: all
+  tasks:
+    - name: YUM | Install Collections
+      shell: ansible-galaxy collection install {{ pacote_collection }}
+      when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    
+    - name: APT | Install Collections
+      shell: ansible-galaxy collection install {{ pacote_collection }}
+      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+...
