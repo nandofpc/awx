@@ -4,5 +4,5 @@
 
   tasks:
   - name: Get Ansible facts
-      debug:
+    debug:
       var: ansible_facts
