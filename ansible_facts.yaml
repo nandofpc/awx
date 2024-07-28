@@ -2,7 +2,7 @@
 - name: Default Playbook
   hosts: all
   tasks:
-	- name: Gedt ansible facts
-	  debug:
-		var: ansible_facts
+    - name: Gedt ansible facts
+      debug:
+      var: ansible_facts
 ---
