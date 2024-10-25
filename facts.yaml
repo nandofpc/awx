@@ -1,7 +1,7 @@
 ---
 - name: Get Facts from machines
   hosts: "{{ awx_group }}"
-  gather_facts: no
+  #gather_facts: no
   vars:
     ansible_host_key_checking: False
     ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
